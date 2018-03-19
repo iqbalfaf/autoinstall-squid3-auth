@@ -18,10 +18,8 @@ lightpurple='\e[1;35m'
 yellow='\e[1;33m'
 white='\e[1;37m'
 
-###
-ceklog-squid=$(tail -f /var/log/squid3/access.log)
-
-echo -e $yellow"=========== Membuat User Squid ==========="
+echo -e $yellow"=========== Cek Log Squid ==========="
 echo -e $lightpurple"=========== Script By.IqbalFAF ==========="
 echo -e $red"=========== http://iqbalfaf.blogspot.com ==========="
-echo -e $green"$ceklog-squid"
+
+tail -f /var/log/squid3/access.log
