@@ -36,7 +36,7 @@ apt-get install wget -y
 
 
 ### Setting up squid3
-wget -O /etc/squid3/squid.conf "https://raw.githubusercontent.com/iqbalfaf/autoinstall-squid3-auth/master/squid3-auth.conf
+wget -O /etc/squid3/squid.conf "https://raw.githubusercontent.com/iqbalfaf/autoinstall-squid3-auth/master/squid3-auth.conf"
 touch /etc/squid3/squid_passwd
 touch /etc/squid3/squid_user
 
