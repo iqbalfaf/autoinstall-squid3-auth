@@ -36,21 +36,24 @@ apt-get install wget -y
 
 
 ### Setting up squid3
-wget -O /etc/squid3/squid.conf "http://linknya"
+wget -O /etc/squid3/squid.conf "https://raw.githubusercontent.com/iqbalfaf/autoinstall-squid3-auth/master/squid3-auth.conf
 touch /etc/squid3/squid_passwd
 touch /etc/squid3/squid_user
 
 ### Download Script
-wget -O /usr/bin/useradd-squid  "http://linknya"
-wget -O /usr/bin/userlist-squid "http://linknya"
+wget -O /usr/bin/useradd-squid  "https://raw.githubusercontent.com/iqbalfaf/autoinstall-squid3-auth/master/useradd-squid.sh"
+wget -O /usr/bin/userlist-squid "https://raw.githubusercontent.com/iqbalfaf/autoinstall-squid3-auth/master/userlist-squid.sh"
+wget -O /usr/bin/ceklog-squid "https://raw.githubusercontent.com/iqbalfaf/autoinstall-squid3-auth/master/ceklog-squid.sh"
 chmod +x /usr/bin/useradd-squid
 chmod +x /usr/bin/userlist-squid
+chmod +x /usr/bin/ceklog-squid
 
 echo -e $blue"Script Telah Berhasil Di Pasang"
 echo "IP VPS Nya : $IPKU"
 echo "Port Squid : 1998, 3128"
 echo "Untuk Membuat Akun Cukup Ketik :  useradd-squid"
 echo "Untuk Mengecek Daftar Akun Squid Ketik : userlist-squid"
+echo "Untuk Mengecek Log Squid Ketik : ceklog-squid"
 echo "Terimakasih ./IqbalFAF"
 echo "Jangan Lupa Kunjungi Blog Saya Untuk Mendapatkan Info Lain Nya"
 echo "http://iqbalfaf.blogspot.com"
