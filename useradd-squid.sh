@@ -22,8 +22,8 @@ white='\e[1;37m'
 
 echo -e $yellow"=========== Membuat User Squid ==========="
 echo -e $lightpurple"=========== Script By.IqbalFAF ==========="
-echo -e $red"=========== http://iqbalfaf.blogspot.com ==========="
-read -p -e $yellow"Nama User Squid : " USER 
+echo -e $green"=========== http://iqbalfaf.blogspot.com ==========="
+read -p "Nama User Squid : " USER 
 read -p "Password Akun : " PASS 
 echo "Isikan Lagi Password nya"
 htpasswd /etc/squid3/squid_passwd $USER
