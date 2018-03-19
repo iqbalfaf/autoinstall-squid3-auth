@@ -27,7 +27,7 @@ read -p "Nama User Squid : " USER
 read -p "Password Akun : " PASS 
 echo "Isikan Lagi Password nya"
 htpasswd /etc/squid3/squid_passwd $USER
-echo -e green" Akun Berhasil Di Buat"
+echo -e $green" Akun Berhasil Di Buat"
 echo "IP VPS Nya : $IPKU"
 echo "Port Squid : 1998, 3128"
 echo " Nama Akun : $USER"
