@@ -18,8 +18,33 @@ lightpurple='\e[1;35m'
 yellow='\e[1;33m'
 white='\e[1;37m'
 
+###
+#####
+
 echo -e $yellow"=========== Cek Log Squid ==========="
 echo -e $lightpurple"=========== Script By.IqbalFAF ==========="
 echo -e $red"=========== http://iqbalfaf.blogspot.com ==========="
-
-tail -f /var/log/squid3/access.log
+echo -e $white" [$lightgreen"1"$white]$blue Cek Dengan Nama USer"
+echo -e $white" [$lightgreen"2"$white]$green Cek Semua User"
+echo -e $white" [$lightgreen"x"$white]$green keluar"
+echo -e $green" ┌─["$red"IqbalFAF$lightgreen]──[$red~$lightgreen]─["$yellow"menu$lighgreen]:"	
+echo -ne $green" └─────► " ;tput sgr0
+read iqbalfaf
+case $iqbalfaf in
+	1)
+	clear
+	 read -p "Silahkan Masukan Nama User : " user
+	 tail -f /var/log/squid3/access.log | grep $user 
+ 	;;
+ 	2)
+	clear
+	echo -e $lightgreen " Cek Log Squid Semua User"
+	tail -f /var/log/squid3/access.log
+	;;
+	x)
+	read -p "Tekan ENTER untuk keluar..."
+	clear
+	exit
+	;;
+esac
+done
